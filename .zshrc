@@ -3,10 +3,6 @@
 [[ -f ~/.zsh/git.zsh ]] && source ~/.zsh/git.zsh
 [[ -f ~/.zsh/git.plugin.zsh ]] && source ~/.zsh/git.plugin.zsh
 [[ -f ~/.zsh/aws-vault.zsh ]] && source ~/.zsh/aws-vault.zsh
-if [ -f '/Users/johnnii.dev/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/johnnii.dev/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-if [ -f '/Users/johnnii.dev/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/johnnii.dev/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-export USE_GKE_GCLOUD_AUTH_PLUGIN=True
-source /Users/johnnii.dev/.docker/init-zsh.sh || true # Added by Docker Desktop
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
@@ -18,8 +14,5 @@ eval "$(starship init zsh)"
 
 # Load Direnv
 eval "$(direnv hook zsh)"
-
-# Added by Amplify CLI binary installer
-export PATH="$HOME/.amplify/bin:$PATH
 
 printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh"}}\x9c'"
